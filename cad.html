@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSA Quiz - Interactive Mode</title>
+    <title>CAD Quiz - Interactive Mode</title>
     <style>
         * {
             margin: 0;
@@ -142,6 +142,7 @@
             color: #2c3e50;
             line-height: 1.5;
             font-weight: 500;
+            white-space: pre-wrap;
         }
 
         .options-container {
@@ -461,14 +462,14 @@
 </head>
 <body>
     <div class="quiz-nav">
-        <a href="cad.html">Switch to CAD Quiz →</a>
+        <a href="index.html">← Switch to CSA Quiz</a>
     </div>
 
     <div class="quiz-container">
         <div class="owner-tag">GitHub: Palamakula-Jashwanth</div>
         <div class="header">
             <h1>Quiz</h1>
-            <p>CSA ServiceNow</p>
+            <p>CAD ServiceNow</p>
         </div>
 
         <div id="quiz-section">
@@ -525,8 +526,8 @@
         </div>
     </div>
 
-    <script src="questions.js"></script>
-
+    <script src="cadquestions.js"></script>
+    
     <script>
         let currentQuestion = 0;
         let userAnswers = [];
@@ -644,11 +645,11 @@
             const correctAnswers = answer.correct;
             
             options.forEach((option, index) => {
-                const checkbox = option.querySelector('input[type="checkbox"]');
-                const value = checkbox.value.toUpperCase();
+                const input = option.querySelector('input');
+                const value = input.value.toUpperCase();
                 
                 option.classList.add('disabled');
-                checkbox.disabled = true;
+                input.disabled = true;
                 
                 if (correctAnswers.includes(value)) {
                     option.classList.add('correct');
@@ -658,7 +659,7 @@
                     option.appendChild(badge);
                 }
                 
-                if (checkbox.checked && !correctAnswers.includes(value)) {
+                if (input.checked && !correctAnswers.includes(value)) {
                     option.classList.add('incorrect');
                     const badge = document.createElement('span');
                     badge.className = 'option-badge incorrect-badge';
@@ -666,8 +667,6 @@
                     option.appendChild(badge);
                 }
             });
-            
-            // No feedback message needed - colors show correct/incorrect
         }
 
         function nextQuestion() {
@@ -753,7 +752,7 @@
             
             if (percentage >= 90) {
                 perfMsg.className = 'performance-message excellent';
-                perfMsg.textContent = '🌟 Outstanding! You have excellent knowledge of ServiceNow CSA concepts!';
+                perfMsg.textContent = '🌟 Outstanding! You have excellent knowledge of ServiceNow CAD concepts!';
                 emoji.textContent = '🏆';
             } else if (percentage >= 75) {
                 perfMsg.className = 'performance-message good';
