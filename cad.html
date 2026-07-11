@@ -160,6 +160,8 @@
             display: flex;
             align-items: flex-start;
             position: relative;
+            min-height: 50px;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .option:hover:not(.disabled) {
@@ -409,35 +411,185 @@
             box-shadow: 0 10px 25px rgba(255, 0, 0, 0.5);
         }
 
-        @media (max-width: 600px) {
-            .quiz-container {
-                padding: 25px;
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
             }
 
-            .header h1 {
-                font-size: 1.7em;
-            }
-
-            .question-text {
-                font-size: 1em;
-            }
-
-            .button-container {
-                flex-direction: column;
-            }
-
-            .results-score {
-                font-size: 3em;
-            }
-
-            .results-emoji {
-                font-size: 3.5em;
+            .owner-tag {
+                position: static;
+                text-align: center;
+                margin-bottom: 8px;
+                font-size: 0.7em;
             }
 
             .quiz-nav {
                 position: static;
                 text-align: center;
                 margin-bottom: 10px;
+            }
+
+            .quiz-nav a {
+                font-size: 0.8em;
+                padding: 6px 12px;
+            }
+
+            .quiz-container {
+                padding: 15px;
+                margin-top: 0;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .header p {
+                font-size: 0.85em;
+            }
+
+            .progress-bar {
+                height: 8px;
+            }
+
+            .question-counter {
+                font-size: 0.85em;
+            }
+
+            .question-box {
+                padding: 15px;
+                border-left-width: 4px;
+            }
+
+            .question-text {
+                font-size: 0.9em;
+                line-height: 1.6;
+            }
+
+            .option {
+                padding: 10px;
+                margin-bottom: 8px;
+            }
+
+            .option input[type="checkbox"],
+            .option input[type="radio"] {
+                width: 18px;
+                height: 18px;
+                margin-right: 10px;
+                flex-shrink: 0;
+            }
+
+            .option label {
+                font-size: 0.9em;
+                line-height: 1.5;
+            }
+
+            .option-badge {
+                position: relative;
+                right: auto;
+                top: auto;
+                display: block;
+                margin-top: 8px;
+                font-size: 0.8em;
+                padding: 4px 10px;
+                width: fit-content;
+            }
+
+            .button-container {
+                flex-direction: row;
+                gap: 8px;
+            }
+
+            .btn {
+                padding: 10px 15px;
+                font-size: 0.85em;
+                letter-spacing: 0.5px;
+            }
+
+            .results-title {
+                font-size: 2em;
+            }
+
+            .results-emoji {
+                font-size: 4em;
+            }
+
+            .results-score {
+                font-size: 3.5em;
+            }
+
+            .percentage {
+                font-size: 1.2em;
+            }
+
+            .results-details {
+                padding: 20px;
+            }
+
+            .result-item {
+                padding: 12px;
+                font-size: 1em;
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
+
+            .result-value {
+                font-size: 1.5em;
+            }
+
+            .performance-message {
+                font-size: 1em;
+                padding: 15px;
+            }
+
+            .btn-restart {
+                padding: 15px 40px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quiz-container {
+                padding: 12px;
+                border-radius: 15px;
+            }
+
+            .header {
+                margin-bottom: 15px;
+                padding-bottom: 10px;
+            }
+
+            .header h1 {
+                font-size: 1.3em;
+            }
+
+            .question-text {
+                font-size: 0.85em;
+            }
+
+            .option {
+                padding: 8px;
+            }
+
+            .option label {
+                font-size: 0.85em;
+            }
+
+            .btn {
+                padding: 8px 12px;
+                font-size: 0.8em;
+            }
+
+            .results-title {
+                font-size: 1.5em;
+            }
+
+            .results-emoji {
+                font-size: 3em;
+            }
+
+            .results-score {
+                font-size: 2.5em;
             }
         }
 
