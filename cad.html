@@ -413,169 +413,38 @@
 
         @media (max-width: 768px) {
             body {
-                padding: 8px;
+                padding: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                min-height: 100vh;
             }
 
             .owner-tag {
                 position: static;
                 text-align: center;
-                margin-bottom: 10px;
-                font-size: 0.7em;
+                margin-bottom: 8px;
+                font-size: 0.65em;
             }
 
             .quiz-nav {
                 position: static;
                 text-align: center;
-                margin-bottom: 12px;
+                margin-bottom: 10px;
             }
 
             .quiz-nav a {
-                font-size: 0.85em;
-                padding: 8px 16px;
+                font-size: 0.8em;
+                padding: 6px 14px;
                 display: inline-block;
             }
 
             .quiz-container {
-                padding: 18px;
-                margin-top: 0;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            }
-
-            .header {
-                margin-bottom: 18px;
-                padding-bottom: 12px;
-            }
-
-            .header h1 {
-                font-size: 1.6em;
-            }
-
-            .header p {
-                font-size: 0.9em;
-            }
-
-            .progress-bar {
-                height: 8px;
-                margin-bottom: 10px;
-            }
-
-            .question-counter {
-                font-size: 0.9em;
-                margin-bottom: 12px;
-            }
-
-            .question-box {
-                padding: 16px;
-                border-left-width: 4px;
-                margin-bottom: 18px;
-            }
-
-            .question-text {
-                font-size: 0.95em;
-                line-height: 1.7;
-            }
-
-            .options-container {
-                margin-top: 18px;
-            }
-
-            .option {
-                padding: 14px;
-                margin-bottom: 12px;
-                min-height: 55px;
-            }
-
-            .option:active {
-                transform: scale(0.98);
-            }
-
-            .option input[type="checkbox"],
-            .option input[type="radio"] {
-                width: 20px;
-                height: 20px;
-                margin-right: 12px;
-                flex-shrink: 0;
-            }
-
-            .option label {
-                font-size: 0.95em;
-                line-height: 1.6;
-            }
-
-            .option-badge {
-                position: relative;
-                right: auto;
-                top: auto;
-                display: block;
-                margin-top: 10px;
-                font-size: 0.85em;
-                padding: 5px 12px;
-                width: fit-content;
-            }
-
-            .button-container {
-                flex-direction: row;
-                gap: 10px;
-                margin-top: 20px;
-            }
-
-            .btn {
-                padding: 12px 20px;
-                font-size: 0.9em;
-                letter-spacing: 0.6px;
-            }
-
-            .results-title {
-                font-size: 2em;
-            }
-
-            .results-emoji {
-                font-size: 4em;
-            }
-
-            .results-score {
-                font-size: 3.5em;
-            }
-
-            .percentage {
-                font-size: 1.3em;
-            }
-
-            .results-details {
-                padding: 25px;
-            }
-
-            .result-item {
                 padding: 15px;
-                font-size: 1.05em;
-                flex-direction: column;
-                text-align: center;
-                gap: 8px;
-            }
-
-            .result-value {
-                font-size: 1.6em;
-            }
-
-            .performance-message {
-                font-size: 1.05em;
-                padding: 18px;
-            }
-
-            .btn-restart {
-                padding: 16px 50px;
-                font-size: 1.05em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 5px;
-            }
-
-            .quiz-container {
-                padding: 14px;
-                border-radius: 12px;
+                margin: 10px auto;
+                width: 100%;
+                max-width: 100%;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             }
 
             .header {
@@ -591,63 +460,217 @@
                 font-size: 0.85em;
             }
 
+            .progress-section {
+                margin-bottom: 12px;
+            }
+
+            .progress-bar {
+                height: 7px;
+                margin-bottom: 8px;
+            }
+
+            .question-counter {
+                font-size: 0.85em;
+                margin-bottom: 10px;
+            }
+
             .question-box {
-                padding: 14px;
+                padding: 12px;
+                border-left-width: 4px;
+                margin-bottom: 15px;
             }
 
             .question-text {
-                font-size: 0.9em;
-                line-height: 1.6;
+                font-size: 0.88em;
+                line-height: 1.5;
+            }
+
+            .options-container {
+                margin-top: 12px;
             }
 
             .option {
-                padding: 12px;
-                min-height: 52px;
+                padding: 10px;
+                margin-bottom: 8px;
+                min-height: 48px;
+            }
+
+            .option:active {
+                transform: scale(0.98);
             }
 
             .option input[type="checkbox"],
             .option input[type="radio"] {
-                width: 19px;
-                height: 19px;
+                width: 18px;
+                height: 18px;
+                margin-right: 10px;
+                flex-shrink: 0;
+                margin-top: 0;
             }
 
             .option label {
-                font-size: 0.9em;
+                font-size: 0.85em;
+                line-height: 1.5;
+            }
+
+            .option-badge {
+                position: relative;
+                right: auto;
+                top: auto;
+                display: block;
+                margin-top: 6px;
+                font-size: 0.75em;
+                padding: 4px 10px;
+                width: fit-content;
+            }
+
+            .button-container {
+                flex-direction: row;
+                gap: 8px;
+                margin-top: 15px;
             }
 
             .btn {
-                padding: 10px 16px;
+                padding: 10px 18px;
                 font-size: 0.85em;
+                letter-spacing: 0.5px;
+            }
+
+            .results-container {
+                padding: 15px 0;
             }
 
             .results-title {
-                font-size: 1.6em;
+                font-size: 1.8em;
             }
 
             .results-emoji {
                 font-size: 3.5em;
+                margin: 15px 0;
             }
 
             .results-score {
                 font-size: 3em;
+                margin: 20px 0;
             }
 
             .percentage {
                 font-size: 1.1em;
             }
 
+            .results-details {
+                padding: 20px;
+                margin: 20px 0;
+            }
+
             .result-item {
                 padding: 12px;
-                font-size: 1em;
+                font-size: 0.95em;
+                flex-direction: column;
+                text-align: center;
+                gap: 6px;
             }
 
             .result-value {
                 font-size: 1.4em;
             }
 
+            .performance-message {
+                font-size: 0.95em;
+                padding: 15px;
+                margin: 20px 0;
+            }
+
             .btn-restart {
-                padding: 14px 40px;
+                padding: 14px 45px;
+                font-size: 0.95em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 3px;
+            }
+
+            .quiz-container {
+                padding: 12px;
+                border-radius: 10px;
+                margin: 5px auto;
+            }
+
+            .header {
+                margin-bottom: 12px;
+                padding-bottom: 8px;
+            }
+
+            .header h1 {
+                font-size: 1.3em;
+            }
+
+            .header p {
+                font-size: 0.8em;
+            }
+
+            .question-box {
+                padding: 10px;
+            }
+
+            .question-text {
+                font-size: 0.82em;
+                line-height: 1.4;
+            }
+
+            .option {
+                padding: 8px;
+                min-height: 45px;
+                margin-bottom: 6px;
+            }
+
+            .option input[type="checkbox"],
+            .option input[type="radio"] {
+                width: 17px;
+                height: 17px;
+                margin-right: 8px;
+            }
+
+            .option label {
+                font-size: 0.82em;
+                line-height: 1.4;
+            }
+
+            .btn {
+                padding: 9px 15px;
+                font-size: 0.8em;
+            }
+
+            .results-title {
+                font-size: 1.5em;
+            }
+
+            .results-emoji {
+                font-size: 3em;
+            }
+
+            .results-score {
+                font-size: 2.5em;
+            }
+
+            .percentage {
                 font-size: 1em;
+            }
+
+            .result-item {
+                padding: 10px;
+                font-size: 0.9em;
+            }
+
+            .result-value {
+                font-size: 1.3em;
+            }
+
+            .btn-restart {
+                padding: 12px 35px;
+                font-size: 0.9em;
             }
         }
 
